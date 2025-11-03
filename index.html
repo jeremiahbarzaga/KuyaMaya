@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeremiah Barzaga - Fullstack & AI Automation Engineer</title>
     <link href="templatemo-personal-style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 <!--
 
@@ -240,6 +242,93 @@ https://templatemo.com/tm-593-personal-shape
 
 <script src="templatemo-personal-javascripts.js"></script>
 
+
+<div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content portfolio-modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="portfolioTitle">Project Showcase</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body">
+          <!-- Carousel -->
+          <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+          
+              <!-- Slide 1 -->
+              <div class="carousel-item active text-center">
+                <img src="images/n8n workflow.jpg" class="d-block w-100 rounded-4 shadow-sm" alt="Project 1">
+                <div class="carousel-text mt-3">
+                  <h5>AI-Powered Solar Inquiry & Booking System with Google Docs Knowledge Base</h5>
+                  <p>
+                    AI-powered system that connects Facebook Messenger, Google Docs, and n8n to handle customer inquiries about solar energy and automatically book free consultations.
+                    It answers questions using a dynamic Google Docs knowledge base and sends real-time notifications when a lead books!
+                  </p>
+                </div>
+              </div>
+          
+              <!-- Slide 2 -->
+              <div class="carousel-item text-center">
+                <img src="images/zapier1.jpg" class="d-block w-100 rounded-4 shadow-sm" alt="Project 3">
+                <div class="carousel-text mt-3">
+                  <h5>Automated Lead Intake & Follow-Up Workflow (Zapier + GoHighLevel Integration)</h5>
+                  <p>A fully automated lead management workflow built with Zapier, designed to streamline client onboarding. When a lead submits a website form, their details are instantly stored in GoHighLevel CRM, a personalized confirmation email is sent automatically, and the internal team receives an instant Slack or email notification — ensuring no lead is ever missed.</p>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="carousel-item text-center">
+                <img src="images/funnels.jpg" class="d-block w-100 rounded-4 shadow-sm" alt="Project 2">
+                <div class="carousel-text mt-3">
+                  <h5>Smart Lead Funnel Automation — Zapier x GoHighLevel</h5>
+                  <p>This workflow automates the entire lead funnel process for service-based businesses. When a lead submits a form on the website, their information is automatically stored in GoHighLevel CRM. A personalized confirmation email is sent instantly to the lead, while an internal notification is sent to the team via Slack or email ensuring no opportunity is missed and every lead receives a quick, professional response.</p>
+                </div>
+              </div>
+              <div class="carousel-item text-center">
+                <img src="images/ordering coffee.jpg" class="d-block w-100 rounded-4 shadow-sm" alt="Project 2">
+                <div class="carousel-text mt-3">
+                  <h5>AI Messenger Ordering System</h5>
+                  <p>An AI-powered Messenger ordering system built with n8n, integrated with Google Docs as a live knowledge base for product info and FAQs. It automates the customer journey  from inquiry to order confirmation by handling real-time responses, validating orders, and sending instant notifications to the business team.</p>
+                </div>
+              </div>
+              
+          
+              
+          
+            </div>
+          
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Bootstrap 5 JS (includes Popper automatically) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 
 </html>
+<script>
+    document.querySelectorAll(".portfolio-item").forEach(item => {
+      item.addEventListener("click", () => {
+        console.log("Portfolio item clicked");
+        
+        const title = item.querySelector(".portfolio-title")?.innerText || "Featured Project";
+        const desc = item.querySelector(".portfolio-desc")?.innerText || "No description available.";
+  
+        document.getElementById("portfolioTitle").innerText = title;
+  
+        const modal = new bootstrap.Modal(document.getElementById("portfolioModal"));
+        modal.show();
+      });
+    });
+  </script>

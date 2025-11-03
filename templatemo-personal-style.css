@@ -1206,3 +1206,54 @@ https://templatemo.com/tm-593-personal-shape
                 padding: 0 1rem;
             }
         }
+        .portfolio-modal-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            box-shadow: var(--shadow-2xl);
+            backdrop-filter: blur(12px);
+          }
+          
+          .modal-header h5 {
+            background: var(--gradient-elegant);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+          }
+          
+          .modal-img-container {
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+          }
+          
+          .modal-img-container img {
+            transition: transform 0.4s ease;
+          }
+          
+          .modal-img-container:hover img {
+            transform: scale(1.05);
+          }
+          .custom-caption {
+            background: rgba(255, 255, 255, 0.8); /* soft white overlay */
+            color: #212529; /* dark readable text */
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            display: inline-block;
+            max-width: 80%;
+            margin: 0 auto;
+            text-shadow: none;
+            backdrop-filter: blur(6px); /* glass effect */
+          }
+          
+          .custom-caption h5 {
+            font-weight: 600;
+            color: #212529;
+          }
+          
+          .custom-caption p {
+            color: #343a40;
+            margin: 0;
+          }
+          
+          
