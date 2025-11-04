@@ -242,6 +242,7 @@ https://templatemo.com/tm-593-personal-shape
             cursor: pointer;
             padding: 0.5rem;
             z-index: 1001;
+            margin-right:50px ;
         }
 
         .hamburger {
