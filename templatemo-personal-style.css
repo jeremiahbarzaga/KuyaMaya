@@ -234,6 +234,7 @@ https://templatemo.com/tm-593-personal-shape
         .nav-links a:hover::after {
             width: 100%;
         }
+        
 
         /* Mobile Menu */
         .mobile-menu-toggle {
@@ -744,6 +745,7 @@ https://templatemo.com/tm-593-personal-shape
         }
 
         .portfolio-item {
+            position: relative; /* Add this */
             background: var(--bg-card);
             border-radius: 25px;
             overflow: hidden;
@@ -759,12 +761,39 @@ https://templatemo.com/tm-593-personal-shape
             transform: translateY(0);
             opacity: 1;
         }
-
+        
         .portfolio-item:hover {
             transform: translateY(-15px);
             box-shadow: var(--shadow-2xl);
         }
-
+        .click-me {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: rgb(253, 253, 253);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            opacity: 0; /* will appear on hover */
+            pointer-events: auto;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+            /* box-shadow: 0 2px 8px rgba(0,0,0,0.2); */
+        
+            /* Animation */
+            animation: floatUpDown 2s ease-in-out infinite;
+        }
+        @keyframes floatUpDown {
+            0% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, -10px); } /* moves up */
+            100% { transform: translate(-50%, 0); }
+        }
+        
+        /* Optional hover effect if you still want it to stand out */
+        .portfolio-item:hover .click-me {
+            opacity: 1; 
+        }
         .portfolio-image {
             width: 100%;
             height: 180px;
