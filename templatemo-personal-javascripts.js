@@ -102,56 +102,56 @@ https://templatemo.com/tm-593-personal-shape
         });
 
         // Enhanced form submission with better UX
-        document.querySelector('.contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const submitBtn = document.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
+        // document.querySelector('.contact-form').addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     const submitBtn = document.querySelector('.submit-btn');
+        //     const originalText = submitBtn.textContent;
         
-            // Add loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            submitBtn.style.background = 'linear-gradient(135deg, #94a3b8, #64748b)';
+        //     // Add loading state
+        //     submitBtn.textContent = 'Sending...';
+        //     submitBtn.disabled = true;
+        //     submitBtn.style.background = 'linear-gradient(135deg, #94a3b8, #64748b)';
         
-            const form = e.target;
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                subject: form.subject.value,
-                message: form.message.value
-            };
+        //     const form = e.target;
+        //     const formData = {
+        //         name: form.name.value,
+        //         email: form.email.value,
+        //         subject: form.subject.value,
+        //         message: form.message.value
+        //     };
             
-            emailjs.init("NhJ04ibO6d1Hastk0");
+        //     emailjs.init("NhJ04ibO6d1Hastk0");
             
-            // Send email using EmailJS
-            emailjs.send("service_pxt0xe9", "template_7znvpqb", formData)
-                .then(() => {
-                    // Show success state
-                    submitBtn.textContent = 'Message Sent! ✓';
-                    submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                    submitBtn.style.transform = 'scale(1.05)';
-                    setTimeout(() => {
-                        submitBtn.style.transform = 'scale(1)';
-                    }, 200);
+        //     // Send email using EmailJS
+        //     emailjs.send("service_pxt0xe9", "template_7znvpqb", formData)
+        //         .then(() => {
+        //             // Show success state
+        //             submitBtn.textContent = 'Message Sent! ✓';
+        //             submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        //             submitBtn.style.transform = 'scale(1.05)';
+        //             setTimeout(() => {
+        //                 submitBtn.style.transform = 'scale(1)';
+        //             }, 200);
         
-                    // Reset form after a delay
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = '';
-                        form.reset();
-                    }, 3000);
-                })
-                .catch((err) => {
-                    console.error("EmailJS error:", err);
-                    submitBtn.textContent = 'Failed to Send ❌';
-                    submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #b91c1c)';
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = '';
-                    }, 3000);
-                });
-        });
+        //             // Reset form after a delay
+        //             setTimeout(() => {
+        //                 submitBtn.textContent = originalText;
+        //                 submitBtn.disabled = false;
+        //                 submitBtn.style.background = '';
+        //                 form.reset();
+        //             }, 3000);
+        //         })
+        //         .catch((err) => {
+        //             console.error("EmailJS error:", err);
+        //             submitBtn.textContent = 'Failed to Send ❌';
+        //             submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #b91c1c)';
+        //             setTimeout(() => {
+        //                 submitBtn.textContent = originalText;
+        //                 submitBtn.disabled = false;
+        //                 submitBtn.style.background = '';
+        //             }, 3000);
+        //         });
+        // });
         
 
         // Enhanced parallax effect for hero background

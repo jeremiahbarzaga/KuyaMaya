@@ -147,7 +147,41 @@ https://templatemo.com/tm-593-personal-shape
             --glass: rgba(255, 255, 255, 0.15);
             --glass-border: rgba(255, 255, 255, 0.2);
         }
-
+        .text-primaryv2 {
+            color: var(--secondary-color);
+        }
+        .btn-outline-primary {
+            color: var(--secondary-color) !important;
+            border-color: var(--gradient-primary) !important;
+            background-color: transparent !important;
+        }
+        
+        
+        .btn-outline-primary:hover,
+        .btn-outline-primary:focus,
+        .btn-outline-primary:active,
+        .btn-outline-primary:focus-visible {
+            color: #fff !important; /* text on hover */
+            background-color: var(--text-secondary) !important;
+            border-color: var(--text-secondary) !important;
+        }
+        .submit-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background-color: var(--text-primary);
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--text-primary-hover, #555); /* optional hover color */
+            color: #fff;
+        }
+        
         body {
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
             line-height: 1.7;
@@ -913,6 +947,12 @@ https://templatemo.com/tm-593-personal-shape
                         radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.06) 0%, transparent 50%),
                         radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
             animation: contactPulse 6s ease-in-out infinite alternate;
+            pointer-events: none;
+
+        }
+        .contact .container {
+            position: relative;
+            z-index: 2; /* ensures buttons are on top */
         }
 
         /* Contact Floating Shapes */
